@@ -116,7 +116,27 @@ Automation Frameworks</p></p>
         </p>
       </section>
 
-      <section id="contact" class="contact wrap">
+      <!--
+  ADD THIS SECTION inside <main>, right before the <section id="contact"> block
+  in your existing index.html.
+-->
+<section id="quiz" class="quiz wrap">
+  <h2>QA trivia — test yourself</h2>
+  <div id="quiz-container" class="quiz-box">
+    <p id="quiz-progress" class="quiz-progress"></p>
+    <p id="quiz-question" class="quiz-question"></p>
+    <div id="quiz-options" class="quiz-options"></div>
+    <p id="quiz-result" class="quiz-result"></p>
+    <button id="quiz-restart" class="btn" hidden>Try again</button>
+  </div>
+</section>
+
+<!--
+  ALSO ADD this script tag, right before your existing
+  <script src="script.js"></script> line, at the bottom of the page:
+-->
+
+<section id="contact" class="contact wrap">
         <h2>Say hello</h2>
         <form id="contact-form">
           <label>
@@ -141,6 +161,7 @@ Automation Frameworks</p></p>
       <p>&copy; <span id="year"></span> Santhanaraj G</p>
     </footer>
 
+    <script src="quiz.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
