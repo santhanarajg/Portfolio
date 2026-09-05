@@ -121,6 +121,7 @@ Automation Frameworks</p></p>
   in your existing index.html.
 -->
 <section id="quiz" class="quiz wrap">
+  <p><h2>Let's Play Some Games 🎮</h2></p>
   <h2>QA trivia — test yourself</h2>
   <div id="quiz-container" class="quiz-box">
     <p id="quiz-progress" class="quiz-progress"></p>
@@ -135,6 +136,27 @@ Automation Frameworks</p></p>
   ALSO ADD this script tag, right before your existing
   <script src="script.js"></script> line, at the bottom of the page:
 -->
+<!--
+  ADD THIS SECTION inside <main>, right after the </section> that closes
+  your quiz section (id="quiz"), and before <section id="contact">.
+-->
+<section id="memory" class="memory wrap">
+  <h2>Memory match</h2>
+  <p class="memory-sub">Flip the cards and find every pair.</p>
+  <div class="memory-info">
+    <span id="memory-moves">Moves: 0</span>
+  </div>
+  <div id="memory-board" class="memory-board"></div>
+  <p id="memory-status" class="memory-status"></p>
+  <button id="memory-restart" class="btn" hidden>Play again</button>
+</section>
+
+<!--
+  ALSO ADD this script tag, at the bottom of the page, right after your
+  existing <script src="quiz.js"></script> line (before script.js):
+-->
+<script src="memory-game.js"></script>
+
 
 <section id="contact" class="contact wrap">
         <h2>Say hello</h2>
@@ -160,7 +182,7 @@ Automation Frameworks</p></p>
     <footer class="site-footer wrap">
       <p>&copy; <span id="year"></span> Santhanaraj G</p>
     </footer>
-
+    <script src="memory-game.js"></script>
     <script src="quiz.js"></script>
     <script src="script.js"></script>
   </body>

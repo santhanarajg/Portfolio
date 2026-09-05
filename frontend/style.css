@@ -264,3 +264,78 @@ section h2 {
   font-weight: 600;
   color: var(--accent);
 }
+/*
+  ADD THIS to the end of your existing style.css
+*/
+
+.memory {
+  padding: 60px 24px;
+  border-top: 1px solid var(--border);
+}
+
+.memory-sub {
+  color: var(--ink-muted);
+  margin: 0 0 16px;
+}
+
+.memory-info {
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 420px;
+}
+
+.memory-card {
+  aspect-ratio: 1 / 1;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1.6rem;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.memory-card:hover:not(.flipped):not(.matched) {
+  border-color: var(--accent);
+}
+
+.memory-card.flipped {
+  background: var(--bg);
+  border-color: var(--accent);
+}
+
+.memory-card.matched {
+  background: rgba(79, 209, 165, 0.15);
+  border-color: var(--accent);
+  cursor: default;
+  opacity: 0.85;
+}
+
+.memory-status {
+  margin: 16px 0 0;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .memory-board {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .memory-card {
+    font-size: 1.3rem;
+  }
+}
