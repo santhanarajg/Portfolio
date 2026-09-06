@@ -1,6 +1,6 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const API_BASE = 'http://localhost:3000'; // change this to your deployed backend URL
+const API_BASE = 'https://portfolio-snb4.onrender.com'; // change this to your deployed backend URL
 
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
